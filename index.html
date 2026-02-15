@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tempo de Passagem do PIG</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Tempo de Passagem do Pig</h1>
+    <p class="hint">Tenha uma previsão precisa e instantânea do tempo de chegada do PIG ao ponto de recebimento. <br><br>Nosso sistema utiliza os dados informados sobre a corrida — como velocidade, extensão do trecho e condições operacionais. <br>Uma <strong>ferramenta</strong>  prática, intuitiva e confiável para apoiar decisões em operações de dutos, garantindo mais segurança, planejamento e eficiência no monitoramento de inspeções.</p>
+
+    <form id="frm" onsubmit="return false;">
+      <div class="grid">
+        <label>Temperatura (°C)
+          <input type="number" step="1" id="C14" value="35" required />
+        </label>
+        <label>Pressão de entrada (kgf/cm²A)
+          <input type="number" step="0.1" id="E17" value="31.0" required />
+        </label>
+        <label>Pressão de saída (kgf/cm²A)
+          <input type="number" step="0.1" id="E18" value="28.2" required />
+        </label>
+        <label>Vazão (MMNm³/d)
+          <input type="number" step="0.100" id="I11" value="1.300" required />
+        </label>
+        <label>Comprimento do duto (km)
+          <input type="number" step="1" id="K20" value="23" required />
+        </label>
+        <label>Diâmetro externo (pol)
+          <input type="number" step="1" id="L11" value="16" required />
+        </label>
+        <label>Espessura da parede (mm) <br>OBS: Não alterar, a menos que o valor correto seja conhecido.
+          <input type="number" step="1" id="M11" value="7" required />
+        </label>
+      </div>
+
+      <button id="btn" class="primary">Calcular</button>
+    </form>
+
+    <section id="res" class="result" hidden>
+      <div class="card time">
+        <h2>Tempo de Passagem do PIG</h2>
+        <p class="big"><span id="tempoFmt">--h--m</span></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <p>
+      Desenvolvido por:
+      <a href="https://www.linkedin.com/in/jandersonpalhares/" target="_blank" rel="noopener noreferrer">
+        Janderson Palhares
+      </a>
+    </p>
+  </footer>
+</body>
+</html>

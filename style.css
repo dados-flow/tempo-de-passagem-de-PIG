@@ -1,0 +1,56 @@
+:root { --bg:#0b1220; --card:#111a2b; --ink:#f4f7ff; --accent:#4cc9f0; --muted:#9fb3ce; --btn:#3a86ff; }
+*{ box-sizing: border-box; }
+body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial, sans-serif; background: var(--bg); color: var(--ink);} 
+.container{ max-width: 680px; margin: 32px auto; padding: 0 16px; }
+h1{ font-size: 1.6rem; margin: 0 0 8px; }
+.hint{ color: var(--muted); margin-top: 0; }
+form{ margin: 16px 0 24px; }
+.grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+label{ display: grid; gap: 6px; background: var(--card); padding: 12px; border-radius: 10px; color: var(--muted); }
+input{ padding: 10px 12px; border-radius: 8px; border: 1px solid #23304a; background: #0a1323; color: var(--ink); outline: none; }
+button.primary{ background: var(--btn); color:white; padding: 12px 16px; border:0; border-radius:10px; font-weight: 600; cursor:pointer; }
+.result{ margin-top: 24px; }
+.card{ background: var(--card); padding: 18px; border-radius: 12px; text-align:center; }
+.card h2{ margin: 6px 0 8px; color: var(--accent); }
+.big{ font-size: 2rem; letter-spacing: 0.5px; }
+.time{ border: 1px solid #23304a; }
+
+/* ===== Rodapé ===== */
+.site-footer {
+  margin-top: 2rem;
+  padding: 16px 20px;
+  background: #0f172a;         /* azul bem escuro (ajuste se quiser combinar com seu tema) */
+  color: #e5e7eb;               /* cinza claro para bom contraste */
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-footer a {
+  color: #60a5fa;               /* azul claro */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+/* Garante que o rodapé fique no final da página, mesmo com pouco conteúdo */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1 0 auto;               /* empurra o rodapé para o final */
+}
+
+.site-footer {
+  flex-shrink: 0;
+}
